@@ -28,6 +28,44 @@
   color: #61dafb;
 }
 
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  height: auto;
+}
+
+.nav-link {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.quote-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;    
+}
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  text-align: center;
+  box-shadow: 0 20px 20px -10px;
+  background-color: transparent;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  align-content: space-between;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
