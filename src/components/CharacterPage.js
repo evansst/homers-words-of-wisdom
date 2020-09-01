@@ -31,8 +31,7 @@ export default class CharacterPage extends Component {
           {quotes.map(quote => {
             return (
               <li className="character-quote">
-                <blockquote>{quote.quote}</blockquote>
-                <button>Favorite</button>
+                <blockquote>"{quote.quote}"</blockquote>
               </li>
             )
           })}

@@ -9,6 +9,7 @@ import './App.css';
 import CharacterList from './containers/CharacterList';
 import CharacterPage from './components/CharacterPage';
 import Login from './components/Login';
+import Home from './components/Home';
 
 class App extends Component {
 
@@ -19,11 +20,6 @@ class App extends Component {
       password: '',
     }
   }
-
-  login = (formData) => {
-
-  }
-
 
   render() {
     return (
@@ -42,8 +38,13 @@ class App extends Component {
               </li>
             </ul>
           </nav>
+        </div>
 
+        <div>
           <Switch>
+            <Route exact path="/" >
+              <Home />
+            </Route>
             <Route exact path="/characters" render={routerProps => <CharacterList {...routerProps} />} />
             <Route path="/characters/:id" render={routerProps => <CharacterPage {...routerProps} />} />
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.login}/>} />
