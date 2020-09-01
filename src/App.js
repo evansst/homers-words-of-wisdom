@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
-import QuoteList from './containers/QuoteList';
-import CharacterList from './containers/CharacterList';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import './App.css';
+import QuoteList from './containers/QuoteList';
+import CharacterList from './containers/CharacterList';
+import CharacterPage from './components/CharacterPage';
 
 function App() {
   return (
@@ -19,21 +20,14 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li className="nav-link">
-              <Link to="/quotes">Quotes</Link>
-            </li>
-            <li className="nav-link">
               <Link to="/characters">Characters</Link>
             </li>
           </ul>
         </nav>
 
         <Switch>
-          <Route path="/characters">
-            <CharacterList />
-          </Route>
-          <Route path="/quotes">
-            <QuoteList />
-          </Route>
+          <Route exact path="/characters" render={routerProps => <CharacterList {...routerProps} />} />
+          <Route path="/characters/:id" render={routerProps => <CharacterPage {...routerProps} />} />
         </Switch>
       </div>
     </Router>
