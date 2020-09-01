@@ -21,6 +21,9 @@ function App() {
             <li className="nav-link">
               <Link to="/quotes">Quotes</Link>
             </li>
+            <li className="nav-link">
+              <Link to="/characters">Characters</Link>
+            </li>
           </ul>
         </nav>
 

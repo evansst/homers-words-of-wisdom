@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { parseJSON } from '../serviceWorker';
 import QuoteCard from '../components/QuoteCard';
 
-const baseURL = 'https://thesimpsonsquoteapi.glitch.me/quotes?count=1000'
+const baseURL = 'https://localhost:3000/quotes'
 
 export default class QuoteList extends Component {
   state = {
