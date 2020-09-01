@@ -7,7 +7,6 @@ export default class CharacterPage extends Component {
       name: '',
       quotes: [],
       image: '',
-
     }
   }
   
@@ -23,8 +22,6 @@ export default class CharacterPage extends Component {
 
   render() {
     const { character, character: { quotes } } = this.state
-    
-
 
     return (
       <>
